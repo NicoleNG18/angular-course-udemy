@@ -12,6 +12,7 @@ import { TaskComponent } from './task/task.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
   title = 'task-management-app';
   users= DUMMY_USERS; 
@@ -19,11 +20,14 @@ export class AppComponent {
 
   onSelectUser(id: string){
 
-let obj=this.users.find(user => {
-  return user.id==id;
-});
+  let obj=this.users.find(user => {
+    return user.id==id;
+  });
+
     if(obj != undefined){
-      this.selectedUser =obj;
+      this.selectedUser = obj;
     } 
+
   }
+
 }
