@@ -16,18 +16,16 @@ import { TaskComponent } from './task/task.component';
 export class AppComponent {
   title = 'task-management-app';
   users= DUMMY_USERS; 
-  selectedUser=this.users[0];
+  selectedUserId ?: string;
 
-  onSelectUser(id: string){
+   get selectedUser(){
+      return this.users.find((user)=>user.id===this.selectedUserId);
+   }
 
-  let obj=this.users.find(user => {
-    return user.id==id;
-  });
-
-    if(obj != undefined){
-      this.selectedUser = obj;
-    } 
+   onSelectUser(id: string){
+       this.selectedUserId = id;
+   }
 
   }
 
-}
+
