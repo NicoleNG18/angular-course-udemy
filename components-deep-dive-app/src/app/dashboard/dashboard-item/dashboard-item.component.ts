@@ -1,4 +1,4 @@
-import { Component, input, Input } from '@angular/core';
+import { Component, input, Input, ViewEncapsulation } from '@angular/core';
 import { ServerStatusComponent } from "../server-status/server-status.component";
 
 @Component({
